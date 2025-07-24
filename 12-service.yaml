@@ -6,7 +6,7 @@ metadata:
     purpose: service-demo
 spec:
   selector:
-    purpose: service-dmeo
+    purpose: service-demo
     project: roboshop
     environment: dev
   ports:
