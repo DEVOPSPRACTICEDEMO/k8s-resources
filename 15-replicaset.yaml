@@ -17,13 +17,13 @@ spec:
       environment: dev
   # Template for the pod replicas
   template:
-  metadata:
-    labels:
-      purpose: replicaset-demo
-      project: roboshop
-      environment: dev
-      app: nginx
-  spec:
-    containers:
-      - name: nginx
-        image: nginx
+    metadata:
+      labels:
+        purpose: replicaset-demo
+        project: roboshop
+        environment: dev
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
