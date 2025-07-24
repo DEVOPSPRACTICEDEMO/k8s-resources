@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  # deployment requires labels in metadata
+  labels:
+    purpose: deployment-demo
+    project: roboshop
+    environment: dev
+    app: nginx
+spec:
+  replicas: 3
+  # These are the labels replica set use to create pod replicas
+  selector:
+    matchLabels:
+      purpose: deployment-demo
+      project: roboshop
+      environment: dev
+      app: nginx
+  # Template for the pod replicas
+  template:
+    metadata:
+      labels:
+        purpose: deployment-demo
+        project: roboshop
+        environment: dev
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:stable-perl
